@@ -2,12 +2,19 @@ package com.mindex.challenge.data;
 
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+
 public class Employee {
+
+    @Id
     private String employeeId;
     private String firstName;
     private String lastName;
     private String position;
     private String department;
+
+    @DBRef
     private List<Employee> directReports;
 
     public Employee() {
@@ -60,4 +67,5 @@ public class Employee {
     public void setDirectReports(List<Employee> directReports) {
         this.directReports = directReports;
     }
+
 }
