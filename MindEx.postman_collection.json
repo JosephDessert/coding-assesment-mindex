@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "1ee7a96c-a032-4c7c-9fbe-8ea779118f1c",
+		"name": "MindEx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2261819"
+	},
+	"item": [
+		{
+			"name": "Get reporting structure",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ReportingStructure/16a596ae-edd3-4847-99fe-c4518e82c86f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ReportingStructure",
+						"16a596ae-edd3-4847-99fe-c4518e82c86f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creat compensation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"compensationId\": null,\r\n    \"employeeId\": \"c0c2293d-16bd-4603-8e08-638a9d18b22c\",\r\n    \"salary\": 1000000,\r\n    \"effectiveDate\": \"1722772376\",\r\n    \"isCurrent\": true,\r\n    \"employee\": null   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/compensation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compensation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get compensation by employeeId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/compensation/c0c2293d-16bd-4603-8e08-638a9d18b22c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compensation",
+						"c0c2293d-16bd-4603-8e08-638a9d18b22c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
